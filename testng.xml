@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+
+		<classes>
+			<class name="com.yasin.test.scripts.CreatingExpiredOrder">
+				<methods>
+
+					<include name="setupSeleniumWebDriver" />
+					<include name="user_hits_order_repository_in_dyn_admin" />
+					<include
+						name="perform_all_the_necessary_query_in_order_to_change_operationTimeStamp_to_any_past_date" />
+					<include
+						name="user_hits_SendCollectionReminderScheduler_url_in_dyn_admin" />
+					<include name="invoke_the_sendCollectionReminders_method" />
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
+
